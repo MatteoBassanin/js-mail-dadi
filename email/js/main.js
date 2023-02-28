@@ -1,20 +1,27 @@
 
 
 
-let email = prompt("Inserisci la tua email");
+const email = prompt("Inserisci la tua email");
 console.log(email);
 
-let emailList = ["pippo@pluto.it", "gianni@pinotto.it" , "mario@luigi.it"];
+const emailList = ["pippo@pluto.it", "gianni@pinotto.it" , "mario@luigi.it"];
 console.log(emailList);
 
+let checkEmail = false;
 
 
 
 for(let i = 0 ; i < emailList.length ; i++){
-    if(email == emailList){
-    console.log("La tua email è valida");
-    }else{
-    console.log("La tua email non è valida");
-    }
+    const emailInserita  = emailList[i];
 
+    if(emailInserita == email){
+    checkEmail = true;
+    }
+    
+}
+
+if (checkEmail) {
+    console.log("La tua email è valida");
+}else {
+    console.log("La tua email non è valida");
 }
